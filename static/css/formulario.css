@@ -1,0 +1,106 @@
+:root {
+  --bg: #0f172a;
+  --card: #6669952b;
+  --accent: #06b6d4;
+  --accent-dark: #0891b2;
+  --muted: #94a3b8;
+  --error: #ef4444;
+  --shadow: rgba(6, 182, 212, 0.2);
+  --border: #334155;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  margin: 0;
+  padding: 40px;
+}
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.formulario {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(20, 20, 40, 0.06);
+}
+.formulario h1 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  color: #ffffff;
+}
+.formulario label {
+  display: block;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"],
+.formulario input[type="tel"],
+.formulario input[type="date"],
+.formulario textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #0f1724;
+}
+.formulario textarea {
+  resize: vertical;
+}
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(75, 121, 241, 0.08);
+}
+.formulario .hint {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 6px;
+}
+.formulario input:invalid {
+  border-color: var(--error);
+}
+.formulario input:invalid:focus {
+  box-shadow: 0 0 0 4px rgba(214, 69, 69, 0.08);
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+.formulario button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.formulario button.secondary {
+  background: #eef2ff;
+  color: var(--accent);
+  border: 1px solid #e2e8ff;
+}
+.formulario button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 18px;
+  }
+  .formulario {
+    padding: 20px;
+  }
+}
